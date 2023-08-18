@@ -1,5 +1,8 @@
 # Sistema-de-usuario
 
+# <img src=".github/FORM_MVC.png" style="display: block; margin: 0 auto" />
+
+
 Sistema feito em node Js que faz cadastro e login de um usuário. A escrita e leitura é feita pelo arquivo <strong style="color: yellow">User.js</strong> que altera o arquivo <strong style="color: yellow">users.json</strong>. As funções desse arquivo são chamadas nos controllers. Em resumo, o arquivo <strong style="color: yellow">users.json</strong> simula um bando de dados.
 
 ## 🛠️ Construído com
