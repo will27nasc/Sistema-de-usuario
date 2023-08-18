@@ -1,0 +1,80 @@
+<main>
+    <section class="section">
+        <div class="container is-flex is-justify-content-center is-align-items-center">
+            <form method="POST" action="/users/register" class="box" enctype="multipart/form-data">
+                <h3 class="subtitle is-3 is-size-5-mobile has-text-centered">Formulário de cadastro</h3>
+                <hr>
+                <div class="field">
+                    <label class="label">Nome</label>
+                    <% var isInvalidName = locals.errors && errors.name? 'is-danger' : '' %>
+                    <div class="control">
+                        <input class="input is-medium <%= isInvalidName %>" name="name" type="text" placeholder="exemplo name">
+                    </div>
+
+                    <% if(locals.errors && errors.name) { %>
+                        <div class="has-text-danger">
+                            <%= errors.name.msg %>
+                        </div>
+                    <% } %>
+                </div>
+            
+                <div class="field">
+                    <label class="label">Email</label>
+                    <% var isInvalidEmail = locals.errors && errors.email? 'is-danger' : '' %>
+                    <div class="control">
+                        <input class="input is-medium <%= isInvalidEmail %>" name="email" type="email" placeholder="e.g. alex@example.com">
+                    </div>
+
+                    <% if(locals.errors && errors.email) { %>
+                        <div class="has-text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="field">
+                    <label class="label">Senha</label>
+                    <% var isInvalidPsw = locals.errors && errors.psw? 'is-danger' : '' %>
+                    <div class="control">
+                        <input class="input is-medium <%= isInvalidPsw %>" name="psw" type="password" placeholder="********">
+                    </div>
+
+                    <% if(locals.errors && errors.psw) { %>
+                        <div class="has-text-danger">
+                            <%= errors.psw.msg %>
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="field">
+                    <label class="label">Foto perfil</label>
+                    <% var isInvalidAvatar = locals.errors && errors.avatar? 'is-danger' : '' %>
+                    <div id="file-js" class="file has-name <%= isInvalidAvatar %>">   
+                        <label class="file-label">
+                            <input class="file-input" type="file" name="avatar">
+                            <span class="file-cta">
+                                <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">
+                                    Escolha uma imagem…
+                                </span>
+                            </span>
+                            <span class="file-name">
+                                No file uploaded
+                            </span>
+                        </label>
+                    </div>
+    
+                    <% if(locals.errors && errors.avatar) { %>
+                        <div class="has-text-danger">
+                            <%= errors.avatar.msg %>
+                        </div>
+                    <% } %>
+                </div>
+            
+                <button class="button is-primary is-medium is-fullwidth">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+</main>

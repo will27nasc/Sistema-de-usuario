@@ -1,0 +1,28 @@
+    <body class="container.is-fullhd is-flex is-flex-direction-column is-justify-content-space-between" style="height: 100vh;">
+        <header>
+            <nav class="navbar has-shadow is-info">
+                <div class="navbar-brand">
+                    <a href="navbar-item">
+                        <img src="/images/logo.png" alt="logo site" class="py-2 px-2" style="max-height: 50px;">
+                    </a>
+                    <a class="navbar-burger" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+
+                <div class="navbar-menu" id="nav-links">
+                    <div class="navbar-end">
+                        <a class="navbar-item" href="/">Home</a>
+                        <% if(locals.isLogged) { %>
+                            <a class="navbar-item" href="/users/profile">Perfil</a>
+                            <a class="navbar-item" aria-current="page" href="/users/logout">Sair</a>
+                        <% } else { %>
+                            <a class="navbar-item" aria-current="page" href="/users/login">Login</a>
+                            <a class="navbar-item" href="/users/register">Cadastro</a>
+                        <% } %>
+                    </div>
+                </div>
+            </nav>
+        </header>

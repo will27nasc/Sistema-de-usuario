@@ -1,0 +1,17 @@
+<section class="section">
+    <div class="container is-flex is-justify-content-center is-align-items-center">
+        <div class="box is-flex is-flex-direction-column">
+            <h2 class="title is-3 has-text-centered">Olá 😀</h2>
+            <h4 class="title is-4 has-text-centered"><%= userLogged.name %></h4>
+            <figure class="image is-128x128 is-align-self-center">
+                <img src="/images/avatars/<%= userLogged.avatar %>">
+            </figure>
+            
+            <div class="box my-5">
+                <h4 class="subtitle is-4 has-text-centered">Meu perfil</h4>
+                <p>Nome: <%= userLogged.name %></p>
+                <p>Email: <%= userLogged.email %></p>
+            </div>
+        </div>
+    </div>
+</section>
